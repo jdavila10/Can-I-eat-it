@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Can I eat it?</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Modal for alerts -->
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content has-text-centered">
+      <button class="button is-danger" style="background-color: red;"><span class="modal-text"
+          style="font-size: 25px;"></span></button>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <!-- page start -->
+  <div class="container">
+    <!-- top banner -->
+    <section class="hero is-primary is-bold">
+      <!-- is-primary -->
+      <div class="hero-body">
+        <div class="container">
+          <div class="has-text-centered">
+            <img src="Assets/header.png" style="height: 50%; width: 50%"></img>
+          </div>
+          <h1 class="title has-text-centered">
+            Can I eat it?
+          </h1>
+          <h2 class="subtitle has-text-centered">
+            Want to eat something but have food allergy? We're here to help!
+          </h2>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="flex-container">
+      <img id="Dairy" class="allergy-icon" src="Assets/allergy-icons/milk.png">
+      <img id="Eggs" class="allergy-icon" src="Assets/allergy-icons/egg.png">
+      <img id="Peanuts" class="allergy-icon" src="Assets/allergy-icons/peanuts.png">
+      <hr>
+      <img id="Soy" class="allergy-icon" src="Assets/allergy-icons/soya.png">
+      <img id="Wheat" class="allergy-icon" src="Assets/allergy-icons/gluten.png">
+      <img id="Tree-Nuts" class="allergy-icon" src="Assets/allergy-icons/nuts.png">
+    </div>
+
+    <div class="container">
+      <!-- tiles for organization and appearance -->
+      <!-- top level tile element -->
+      <div class="tile is-ancestor">
+        <!-- 2nd level tile element - arranges its sub-tiles vertically -->
+        <div class="tile is-vertical">
+          <!-- this tile contains 1. Allergies and 2. Category -->
+          <div class="tile">
+            <!-- parent tile of 1. Allergies -->
+            <div class="tile is-parent">
+              <!-- 1. Allergies tile -->
+              <article class="tile is-child notification  has-text-centered"
+                style="background-color: #C6FFDD; border: 2px solid black;">
+                <p class="title">1. Allergies!</p>
+                <p class="subtitle">Check your Allergies!</p>
+                <div class="dropdown allergy-dropdown">
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span id="allergy-display">Allergies</span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a class="dropdown-item allergy-item">
+                        Dairy
+                      </a>
+                      <a class="dropdown-item allergy-item">
+                        Eggs
+                      </a>
+                      <a class="dropdown-item allergy-item">
+                        Peanuts
+                      </a>
+                      <a class="dropdown-item allergy-item">
+                        Soy
+                      </a>
+                      <a class="dropdown-item allergy-item">
+                        Wheat
+                      </a>
+                      <a class="dropdown-item allergy-item">
+                        Tree Nuts
+                      </a>
+                      <!-- <a class="dropdown-item allergy-item">
+                          Fish
+                        </a>
+                        <a class="dropdown-item allergy-item">
+                          Shellfish
+                        </a> -->
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- parent tile of 2. Category! -->
+            <div class="tile is-parent">
+              <!-- 2. Category Tile -->
+              <article class="tile is-child notification has-text-centered"
+                style="background-color: #FBD786; border: 2px solid black;">
+                <p class="title">2. Category!</p>
+                <p class="subtitle">What are you eating?</p>
+                <div class="dropdown category-dropdown">
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span id="category-display">Category</span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <!-- <a class="dropdown-item category-item">
+                          Breakfast
+                        </a>
+                        <a class="dropdown-item category-item">
+                          Lunch
+                        </a>
+                        <a class="dropdown-item category-item">
+                          Dinner
+                        </a> -->
+                      <a class="dropdown-item category-item">
+                        Snack
+                      </a>
+                      <a class="dropdown-item category-item">
+                        Drink
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- parent tile of 3. Barcode! -->
+          <div class="tile is-parent">
+            <!-- Barcode tile! -->
+            <article class="tile is-child notification has-text-centered"
+              style="background-color: #f7797d; color: white; border: 2px solid black;">
+              <p class="title">3. Barcode!</p>
+              <p class="subtitle">Enter the barcode numbers that you see on your food item!</p>
+              <h2 class="has-text-centered" style="font-size: 20px;">Find the 12 digit number like the one below!</h2>
+              <img src="Assets/questionmarks1.png" class="question-img"></img>
+              <!-- barcode image -->
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Example_barcode.svg"
+                style="height: 161px; width: 215px; background-color: white; border-style: solid; border-color: black; border-radius: 5px;;">
+              <img src="Assets/questionmarks1.png" class="question-img"></img>
+              <!-- barcode input -->
+              <!-- columns -> column setup is required to get the textarea input centered -->
+              <div class="columns is-mobile is-centered">
+                <div class="column is-narrow">
+                  <div class="field">
+                    <div class="control" style="width: 215px;">
+                      <textarea id="barcode-input" class="textarea is-small has-fixed-size" placeholder="1234567890128"
+                        rows="1" style="font-size: 20px; border: 2px solid black; "></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- search button -->
+              <button class="button is-success is-large submit-btn">Search!</button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+    integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./Assets/script.js"></script>
+
+</body>
+
+
+</html>

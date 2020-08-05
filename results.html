@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can I Eat It?</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <link rel="stylesheet" href="results.css">
+</head>
+
+<body>
+  <div class="container">
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <div class="has-text-centered">
+            <img src="Assets/header.png" style="height: 50%; width: 50%"></img>
+          </div>
+          <h1 class="title has-text-centered">
+            Can I eat it?
+          </h1>
+          <h2 class="subtitle has-text-centered">
+            Want to eat something but have food allergy? We're here to help!
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section is-primary">
+      <div class="container">
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical">
+            <div class="tile">
+              <div class="tile is-parent is-vertical">
+                <article id="input" class="tile is-child notification is-primary has-text-centered"
+                  style="background-color: #C6FFDD; border: 2px solid black;">
+                  <div class="dropdown search-dropdown">
+                    <div class="dropdown-trigger">
+                      <label class="label">Search History</label>
+                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>Search History</span>
+                        <span class="icon is-small">
+                          <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content history-content"></div>
+                    </div>
+                  </div>
+
+                </article>
+              </div>
+
+              <div class="tile is-parent is-vertical">
+                <article id="input" class="tile is-child notification is-primary has-text-centered"
+                  style="background-color: #fbd786; border: 2px solid black;">
+                  <div class="control">
+                    <label class="label">Allergy</label>
+                    <input class="input has-text-centered" id="allergyInput" type="text" value="Allergy Input" readonly>
+                  </div>
+                </article>
+              </div>
+
+              <div class="tile is-parent is-vertical">
+                <article id="input" class="tile is-child notification is-primary has-text-centered"
+                  style="background-color: #fbd786; border: 2px solid black;">
+                  <div class="control">
+                    <label class="label">Food Category</label>
+                    <input class="input has-text-centered" id="categoryInput" type="text" value="Food Category Input"
+                      readonly>
+                  </div>
+                </article>
+              </div>
+
+              <div class="tile is-parent is-vertical">
+                <article id="input" class="tile is-child notification is-primary has-text-centered"
+                  style="background-color: #f7797d; border: 2px solid black;">
+                  <div class="control">
+                    <label class="label">Item</label>
+                    <input class="input has-text-centered" id="itemInput" type="text" value="Food Item Input" readonly>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-light-title has-text-centered"
+                style="background-color: #f7797d; border: 2px solid black;">
+
+                <p id="resultPhrase" class="title" style="color: white;">Results!</p>
+
+
+                <!-- result image -->
+                <img id="results-img" style="border: 2px solid black; height: 150px; width: 200px;">
+                <img id="food-img" style="border: 2px solid black; height: 150px; width: auto;">
+                <!-- barcode input -->
+
+                <p id="alt-food" class="title" style="color: white;">Alternatives in food category</p>
+                <img id="firstAlt" src="#" style="border: 2px solid black; height: 150px; width: 200px;">
+                <img id="secondAlt" src="#" style="border: 2px solid black; height: 150px; width: 200px;">
+                <p class="link" style="color: white;">If you don't like these, check out this page for more suggestions!
+                </p>
+                <a id= "link" rel="noopener noreferrer"
+                  href="https://www.everydayallergenfree.com/home/2018/12/5/best-list-food-allergy-brands-companies"
+                  target="_blank" style="color: white;">Everyday Allergen-Free</a>
+                
+                <!-- search again button -->
+                <div class="buttons is-centered">
+                  <button class="button is-success is-large search-btn">Search Again</button>
+
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous"></script>
+      <script type="text/javascript" src="./Assets/results.js"></script>
+</body>
+
+</html>

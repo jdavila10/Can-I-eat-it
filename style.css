@@ -1,0 +1,91 @@
+html { 
+    /* background from https://uigradients.com/#MegaTron - note: this displays rotate 180 degrees from the website display  */
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* overflow-x: hidden;  */
+}
+
+/* flex container and items for icon display */
+.flex-container
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* screen widths more than 768px, hr is 0% wide */
+.flex-container hr
+{
+    width: 0%;
+}
+.allergy-icon
+{
+   height: 12%;
+   width: 12%;
+   flex-basis: auto; 
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+/* question mark images in barcode tile */
+.question-img
+{
+    height: 30%; 
+    width: 20%;
+}
+
+/* applies border for allergy icon focus*/
+.icon-has-focus
+{
+    border: 10px solid yellow;
+    border-radius: 25px;
+}
+
+/* below 441px, set question-img height/width to 0px*/
+@media only screen and (max-width: 440px){
+    .question-img
+    {
+        height: 0px;
+        width: 0px;
+    }
+}
+
+/* at 768px and below, force two rows in flexbox */
+@media only screen and (max-width: 768px){
+    .flex-container hr
+    {
+        width: 100%;
+        visibility: hidden;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .allergy-icon
+    {
+        height: 15%;
+        width: 15%;
+    }
+    .icon-has-focus
+{
+    border: 5px solid yellow;
+    border-radius: 15px;
+}
+}
+
+/* below 1024px, hide overflow-x */
+@media only screen and (max-width: 1023px){
+    html,body
+    {
+        overflow-x: hidden;
+    }
+}
