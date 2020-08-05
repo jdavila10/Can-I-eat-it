@@ -15,10 +15,10 @@ SO THAT I can avoid allergic reactions that may be fatal to my health.
 
 
 ## Contributors
-Nick Pettis 
-John Edwards
-Hoang Nguyen
-Jonathan Echevarria
+*Nick Pettis 
+*John Edwards
+*Hoang Nguyen
+*Jonathan Echevarria
 
 ## Languages used
 *HTML
