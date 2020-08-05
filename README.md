@@ -15,11 +15,8 @@ SO THAT I can avoid allergic reactions that may be fatal to my health.
 
 
 ## Contributors
-Front-End Team
 Nick Pettis 
 John Edwards
-
-Back-End Team
 Hoang Nguyen
 Jonathan Echevarria
 
